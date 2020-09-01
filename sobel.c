@@ -7,8 +7,8 @@
 #include <stdlib.h> // added to use atoi()
 
 // Define high and low thresholds
-#define HI 110
-#define LO 40
+#define HI 109
+#define LO 39
 
         int pic[256][256];
         int outpicx[256][256];
@@ -32,22 +32,22 @@ char **argv;
         foobar = *argv;
         fp1=fopen(foobar,"rb");
 
-	argc--; argv++;
-	foobar = *argv;
-	fo0=fopen(foobar,"wb");
+	      argc--; argv++;
+	      foobar = *argv;
+	      fo0=fopen(foobar,"wb");
 
         argc--; argv++;
-	foobar = *argv;
-	fo1=fopen(foobar,"wb");
+        foobar = *argv;
+        fo1=fopen(foobar,"wb");
 
         argc--; argv++;
-	foobar = *argv;
-	fo2=fopen(foobar,"wb");
+        foobar = *argv;
+        fo2=fopen(foobar,"wb");
 
         /* 
         argc--; argv++;
-	foobar = *argv;
-	threshold = atoi(foobar); // changed atof -> atoi
+        foobar = *argv;
+        threshold = atoi(foobar); // changed atof -> atoi
          */
 
         // Load the image
