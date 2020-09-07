@@ -4,7 +4,6 @@
 
 #include <stdio.h>                          /* Sobel.c */
 #include <math.h>
-#include <stdlib.h> // added to use atoi()
 
 // Define high and low thresholds
 #define HI 109
@@ -30,25 +29,13 @@ char **argv;
 
         argc--; argv++;
         foobar = *argv;
-        fp1=fopen(foobar,"rb");
+        fp1=fopen(foobar,"rb"); // original
 
-	      argc--; argv++;
-	      foobar = *argv;
-	      fo0=fopen(foobar,"wb");
+	      fo0=fopen("sobelM.pgm","wb"); // mag
 
-        argc--; argv++;
-        foobar = *argv;
-        fo1=fopen(foobar,"wb");
+        fo1=fopen("sobelLo.pgm","wb"); // lo
 
-        argc--; argv++;
-        foobar = *argv;
-        fo2=fopen(foobar,"wb");
-
-        /* 
-        argc--; argv++;
-        foobar = *argv;
-        threshold = atoi(foobar); // changed atof -> atoi
-         */
+        fo2=fopen("sobelHi.pgm","wb"); // hi
 
         // Load the image
         for (i=0;i<15;i++) // cut off the header
